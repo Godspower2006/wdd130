@@ -1,8 +1,29 @@
-main {
+nav {
+    background-color: #fff;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  main {
     max-width: 840px;
-}
-
-aside {
+    margin: 0 auto;
+  }
+  
+  aside {
     width: 300px;
     margin: 20px auto;
     border: 1px solid #ccc;
@@ -10,24 +31,20 @@ aside {
     background-color: #f0f0f0;
     color: #333;
     text-align: center;
-}
-
-aside img {
+  }
+  
+  aside img {
     width: 200px;
     height: auto;
-}
-
-main img {
-    width: 200px;
-    height: auto;
-}
-
-p {
+  }
+  
+  p {
     padding: 0;
-}
-
-footer {
+  }
+  
+  footer {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     text-align: center;
-}
+  }
+  
