@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Whitewater Rafting Adventures for inquiries, reservations, or website suggestions.">
+  <meta name="author" content="Andrew Godspower">
+  <title>Contact Us - Whitewater Rafting Adventures</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+  
+  <header>
+    <div class="branding">
+      <img src="images/logo.png" alt="Whitewater Rafting Adventures Logo">
+      <h1>Whitewater Rafting Adventures</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Company Information Section -->
+    <section class="company-info">
+      <h2>Contact Information</h2>
+      <address>
+        <p>Whitewater Rafting Adventures</p>
+        <p>123 River Bend Road</p>
+        <p>Rafting City, RC 45678</p>
+        <p>Phone: (+234) 7088520985</p>
+        <p>Email: godspowerandrew886@gmail.com</p>
+      </address>
+      
+      <div class="map">
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019272540091!2d-122.42067968468188!3d37.77902667975714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809cdb6f1d73%3A0xf31a1b4e5b1b1e84!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" allowfullscreen></iframe>
+      </div>
+    </section>
+    
+    <!-- Employee Profiles Section -->
+    <section class="employee-profiles">
+      <h2>Meet Our Team</h2>
+      <figure>
+        <img src="images/employee1.jpg" alt="John Doe">
+        <figcaption>John Doe - Operations Manager</figcaption>
+      </figure>
+      <figure>
+        <img src="images/employee2.jpg" alt="Jane Smith">
+        <figcaption>Jane Smith - Customer Relations</figcaption>
+      </figure>
+      <figure>
+        <img src="images/employee3.jpg" alt="Alex Johnson">
+        <figcaption>Alex Johnson - Adventure Guide</figcaption>
+      </figure>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="submit_contact.php" method="post">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <fieldset class="form-group">
+          <legend>Purpose of Your Message:</legend>
+          <div>
+            <input type="radio" id="inquiry" name="purpose" value="General Inquiry" required>
+            <label for="inquiry">General Inquiry</label>
+          </div>
+          <div>
+            <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+            <label for="reservation">Reservation Question</label>
+          </div>
+          <div>
+            <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+            <label for="suggestion">Website Suggestion</label>
+          </div>
+        </fieldset>
+        
+        <div class="form-group">
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <input type="checkbox" id="subscribe" name="subscribe">
+          <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit">Submit Your Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Whitewater Rafting Adventures by Andrew Godspower</p>
+    <nav class="sociallinks">
+      <a href="https://facebook.com">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com">
+        <img src="images/twitter.png" alt="Twitter">
+      </a>
+      <a href="https://instagram.com">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+    </nav>
+    <!-- Link to the Contact Us wireframe image -->
+    <p><a href="wireframe-contact.jpg" target="_blank">View Contact Us Wireframe</a></p>
+  </footer>
+</body>
+</html>
