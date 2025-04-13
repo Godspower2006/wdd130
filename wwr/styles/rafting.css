@@ -57,89 +57,32 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Hero Section Styles */
-.hero {
-  position: relative;
-  width: 100%;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--heading-font);
-  color: #000;
-  background-color: rgba(213, 223, 212, 0.767);
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
-
-/* Footer Styles with Social Links aligned to the right */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--secondary-color);
-  color: #fff;
-  padding: 1rem;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Social Links Styling */
-.sociallinks {
-  display: flex;
-  gap: 1rem;
-}
-
-.sociallinks a {
-  text-decoration: none;
-}
-
-.sociallinks img {
-  width: 30px;
-  height: 30px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  header {
-    grid-template-columns: 1fr;
-    text-align: center;
+/* Main layout grid at desktop widths */
+@media (min-width: 769px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "company-info contact-form"
+      "employee-profiles employee-profiles";
+    gap: 2rem;
   }
-  
-  nav {
-    flex-direction: column;
-    align-items: center;
+  .company-info {
+    grid-area: company-info;
   }
-  
-  footer {
-    flex-direction: column;
-    text-align: center;
+  .contact-form {
+    grid-area: contact-form;
   }
-  
-  .sociallinks {
-    justify-content: center;
-    margin-top: 1rem;
+  .employee-profiles {
+    grid-area: employee-profiles;
   }
 }
-
-/* Additional CSS for Contact Us Page */
 
 /* Company Information Section */
 .company-info {
   padding: 2rem;
   background-color: #f9f9f9;
-  margin-bottom: 2rem;
+  /* margin-bottom removed—grid gap handles spacing */
 }
 
 .company-info address {
@@ -164,11 +107,14 @@ footer p {
 .employee-profiles {
   padding: 2rem;
   text-align: center;
+  /* Use grid for consistent spacing on larger screens */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .employee-profiles figure {
-  display: inline-block;
-  margin: 1rem;
+  margin: 0;
 }
 
 .employee-profiles img {
@@ -186,7 +132,7 @@ footer p {
 .contact-form {
   padding: 2rem;
   background-color: #f1f1f1;
-  margin-bottom: 2rem;
+  /* margin-bottom removed—grid gap handles spacing */
 }
 
 .contact-form form {
@@ -241,8 +187,58 @@ footer p {
 
 /* Responsive adjustments for Employee Profiles */
 @media (max-width: 768px) {
-  .employee-profiles figure {
+  .employee-profiles {
     display: block;
+    text-align: center;
+  }
+  .employee-profiles figure {
     margin: 1rem auto;
+  }
+}
+
+/* Footer Styles with Social Links aligned to the right */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Ensure footer links (e.g. your wireframe link) are white on dark bg */
+footer p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Social Links Styling */
+.sociallinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.sociallinks a {
+  text-decoration: none;
+}
+
+.sociallinks img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive adjustments for Footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sociallinks {
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
